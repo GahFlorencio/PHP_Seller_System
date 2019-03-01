@@ -13,9 +13,9 @@ PHP Seller  - Using HTML, PHP5, AJAX , Java Script and Boostrap ( Postgres 9.4 B
   + PHP 5.6.40
 
 # SETUP PHP INI
-  uncomment these extensions.
-  extension=php_pdo_pgsql.dll
-  extension=php_pgsql.dll
+  uncomment these extensions.<br>
+  extension=php_pdo_pgsql.dll<br>
+  extension=php_pgsql.dll<br>
   
   
   Be Happy and Enjoy ;D
