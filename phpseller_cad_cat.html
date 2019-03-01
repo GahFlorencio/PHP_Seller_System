@@ -1,0 +1,173 @@
+
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PHP Seller</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  
+   <script>
+
+	function moeda(a, e, r, t) {
+    let n = ""
+      , h = j = 0
+      , u = tamanho2 = 0
+      , l = ajd2 = ""
+      , o = window.Event ? t.which : t.keyCode;
+    if (13 == o || 8 == o)
+        return !0;
+    if (n = String.fromCharCode(o),
+    -1 == "0123456789".indexOf(n))
+        return !1;
+    for (u = a.value.length,
+    h = 0; h < u && ("0" == a.value.charAt(h) || a.value.charAt(h) == r); h++)
+        ;
+    for (l = ""; h < u; h++)
+        -1 != "0123456789".indexOf(a.value.charAt(h)) && (l += a.value.charAt(h));
+    if (l += n,
+    0 == (u = l.length) && (a.value = ""),
+    1 == u && (a.value = "0" + r + "0" + l),
+    2 == u && (a.value = "0" + r + l),
+    u > 2) {
+        for (ajd2 = "",
+        j = 0,
+        h = u - 3; h >= 0; h--)
+            3 == j && (ajd2 += e,
+            j = 0),
+            ajd2 += l.charAt(h),
+            j++;
+        for (a.value = "",
+        tamanho2 = ajd2.length,
+        h = tamanho2 - 1; h >= 0; h--)
+            a.value += ajd2.charAt(h);
+        a.value += r + l.substr(u - 2, u)
+    }
+    return !1
+}
+</script>
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+    <a class="navbar-brand mr-1" href="index.html">PHP Seller</a>
+
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+  
+
+  </nav>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-cart-plus"></i>
+          <span>Vendas</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-box-open"></i>
+          <span>Produtos</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="phpseller_cad_prod.html">Cadastro</a>
+        </div>
+      </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <i class="fas fa-list"></i>
+          <span>Categorias</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="phpseller_cad_cat.html">Cadastro</a>
+        </div>
+      </li>
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">Categoria</a>
+          </li>
+          <li class="breadcrumb-item active">Cadastro</li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1>Nova Categoria</h1>
+        <hr>
+        
+		  <div class="form-group" style="width:45%;">
+			<label for="exampleInputEmail1">Descrição</label>
+			<input type="text" class="form-control" id="desc" aria-describedby="emailHelp" placeholder="DESCRIÇÃO DA CATEGORIA " required>
+			
+		  </div>
+		  <div class="form-group" >
+			<label for="exampleInputPassword1">Imposto</label>
+			<input type="text" class="form-control" id="imp" placeholder="0.00" style="width:25%;" onKeypress="return(moeda(this,'','.',event))" required>
+			<small id="emailHelp" class="form-text text-muted">Adicione  de 0.00 até 100.00 sem o sinal de %</small>
+		  </div>
+		  <br><br>
+		  <button onclick="addCat();"class="btn btn-primary">Salvar Categoria </button>
+		<div id="Resultado">
+		</div>
+
+
+
+
+      </div>
+      <!-- /.container-fluid -->
+
+      
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+   <script src="js/ajax.js"></script>
+   <script src="js/jquery-3.3.1.js"></script>
+ 
+
+</body>
+
+</html>
