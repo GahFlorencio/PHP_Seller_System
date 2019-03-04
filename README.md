@@ -1,5 +1,5 @@
 # PHP_Seller_System
-PHP Seller  - Using HTML, PHP5, AJAX , Java Script and Boostrap ( Postgres 9.4 BD )
+PHP Seller  - Using HTML, PHP5, AJAX , Java Script and Boostrap ( Postgres 9.4 DB )
 
 # SETUP DB
 
